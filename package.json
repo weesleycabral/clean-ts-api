@@ -3,17 +3,22 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@types/jest": "^29.5.14",
     "@types/node": "^22.10.2",
+    "eslint": "^8.57.1",
     "git-commit-msg-linter": "^5.0.8",
-    "husky": "^9.1.7",
+    "husky": "^4.3.8",
+    "jest": "^29.7.0",
     "lint-staged": "^15.2.11",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
     "ts-standard": "^12.0.2",
     "typescript": "^5.7.2"
   },
@@ -21,7 +26,6 @@
     "project": "./tsconfig.json"
   },
   "dependencies": {
-    "clean-node-api": "file:",
-    "eslint": "^8.57.1"
+    "clean-node-api": "file:"
   }
 }

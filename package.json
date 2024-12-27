@@ -12,11 +12,12 @@
   "devDependencies": {
     "@types/node": "^22.10.2",
     "git-commit-msg-linter": "^5.0.8",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.11",
     "ts-standard": "^12.0.2",
     "typescript": "^5.7.2"
   },
   "ts-standard": {
-    "project": "./tsconfig.eslint.json"
+    "project": "./tsconfig.json"
   }
 }
-

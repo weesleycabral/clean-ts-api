@@ -19,5 +19,9 @@
   },
   "ts-standard": {
     "project": "./tsconfig.json"
+  },
+  "dependencies": {
+    "clean-node-api": "file:",
+    "eslint": "^8.57.1"
   }
 }

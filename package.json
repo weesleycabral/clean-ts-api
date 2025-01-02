@@ -17,6 +17,7 @@
   "devDependencies": {
     "@types/jest": "^29.5.14",
     "@types/node": "^22.10.2",
+    "@types/validator": "^13.12.2",
     "eslint": "^8.57.1",
     "git-commit-msg-linter": "^5.0.8",
     "husky": "^4.3.8",
@@ -31,6 +32,7 @@
     "project": "./tsconfig.json"
   },
   "dependencies": {
-    "clean-node-api": "file:"
+    "clean-node-api": "file:",
+    "validator": "^13.12.0"
   }
 }

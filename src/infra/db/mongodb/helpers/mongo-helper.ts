@@ -9,7 +9,7 @@ export const MongoHelper = {
     if (!process.env.MONGO_URL) {
       throw new Error('MONGO_URL is not defined')
     }
-    this.client = await MongoClient.connect(process.env.MONGO_URL, {
+    this.client = await MongoClient.connect(uri, {
     })
     this.db = await this.client.db()
   },

@@ -5,7 +5,10 @@ import { AccountModel } from '../../../../domain/models/account'
 export const MongoHelper = {
   client: null as unknown as MongoClient,
   db: null as any,
+  uri: null as unknown as string,
+
   async connect (uri: string): Promise<void> {
+    this.uri = uri
     if (!process.env.MONGO_URL) {
       throw new Error('MONGO_URL is not defined')
     }
@@ -16,9 +19,13 @@ export const MongoHelper = {
 
   async disconnect () {
     await this.client.close()
+    this.client = null
   },
 
-  getCollection (name: string): Collection {
+  async getCollection (name: string): Promise<Collection> {
+    if (!this.client?.topology?.isConnected()) {
+      await this.connect(this.uri)
+    }
     return this.db.collection(name)
   },
 
